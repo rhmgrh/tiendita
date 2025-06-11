@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Venta Masiva 2026</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #f5f8ff;
+    }
+
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    section.hero {
+      background-color: #3b82f6;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    section.hero .badge {
+      background-color: #facc15;
+      padding: 10px 20px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 10px;
+      border-radius: 30px;
+    }
+
+    .btn {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: #1e3a8a;
+    }
+
+    .brands {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .brand-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 160px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .brand-card img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
+    .form-container {
+      background: white;
+      margin: 40px 20px;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      margin: 10px 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>Venta Masiva 2026</header>
+
+  <section class="hero">
+    <div class="badge">¡VENTA MASIVA 2026!</div>
+    <h1>¡Bienvenidos!</h1>
+    <p>Descubre increíbles descuentos en tus marcas favoritas de cuidado personal</p>
+    <button class="btn">Ver Productos</button>
+  </section>
+
+  <h2>Nuestras Marcas</h2>
+  <div class="brands">
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/NIVEA_logo_2021.svg" alt="NIVEA">
+      <h3>NIVEA</h3>
+      <p>Cuidado esencial</p>
+    </div>
+    <div class="brand-card">
+      <img src="https://live.staticflickr.com/65535/40896760423_260cb85883_z.jpg"
+        alt="Eucerin">
+      <h3>EUCERIN</h3>
+      <p>Dermatología avanzada</p>
+    </div>
+    <div class="brand-card">
+      <img src="https://1000marcas.net/wp-content/uploads/2021/05/Logo-Labello.jpg" alt="Labello">
+      <h3>LABELLO</h3>
+      <p>Cuidado de labios</p>
+    </div>
+    <div class="brand-card">
+      <img src="https://logowik.com/content/uploads/images/aquaphor-healing-ointment3299.logowik.com.webp"
+        alt="Aquaphor">
+      <h3>AQUAPHOR</h3>
+      <p>Reparación intensiva</p>
+    </div>
+    <div class="brand-card">
+      <img src="https://images.seeklogo.com/logo-png/33/1/coppertone-logo-png_seeklogo-337384.png">
+      <h3>COPPERTONE</h3>
+      <p>Protección solar avanzada</p>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h2>¿Tienes preguntas?</h2>
+    <form id="formulario">
+      <label>Nombre</label>
+      <input type="text" id="nombre" required>
+      <label>Email</label>
+      <input type="email" id="email" required>
+      <label>Mensaje</label>
+      <textarea id="mensaje" rows="4" required></textarea>
+      <button type="submit" class="btn">Enviar Mensaje</button>
+    </form>
+    <p id="respuesta"></p>
+  </div>
+
+  <footer>
+    <p>Venta Masiva 2026</p>
+    <p>Los mejores productos de cuidado personal</p>
+    <div class="social-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="Twitter">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384028.png" alt="YouTube">
+    </div>
+    <p>© 2026 Venta Masiva. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      fetch('https://script.google.com/macros/s/AKfycbxgA-ep5k7-ohixz7cBm4hdOnjloWKJRU1G3Tu-2i8YTul32ddG2kHManazHyROLNxO/exec', {
+        method: 'POST',
+        body: new URLSearchParams({
+          "nombre": nombre,
+          "email": email,
+          "comentario": mensaje
+        })
+      })
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('respuesta').innerText = data;
+          document.getElementById('formulario').reset();
+        })
+        .catch(error => {
+          document.getElementById('respuesta').innerText = "Ocurrió un error. Intenta de nuevo.";
+        });
+    });
+  </script>
+
+</body>
+
+</html>
